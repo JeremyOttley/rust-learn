@@ -14,9 +14,9 @@ mod pig_latin {
     pub fn convert(word: &str) -> String {
         let max = word.len() - 1;
         if is_vowel(&word.chars().nth(0).unwrap()) {
-            return  format!("{}{}", &word, "yay");
+            return  format!("{}yay", &word);
         } else {
-            return format!("{}{}{}", &word[1..=max], &word.chars().nth(0).unwrap(), "ay");
+            return format!("{0}{1}ay", &word[1..=max], &word.chars().nth(0).unwrap());
         }        
     }
 

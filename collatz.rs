@@ -1,12 +1,15 @@
 mod collatz {
     pub fn collatize(n: i32) -> i32 {
-            if greater_than_zero(n) && is_even(n) {
-                return n / 2
-            } else if greater_than_zero(n) && is_odd(n) {
-                return (n * 3) + 1
-            } else {
-                return n
+            while greater_than_zero(n) {
+                if is_even(n) {
+                    return n / 2
+                } else if is_odd(n) {
+                    return (n * 3) + 1
+                } else {
+                    return n
+                }
             }
+            return 0
     }    
     
     fn greater_than_zero(n: i32) -> bool {
@@ -27,4 +30,3 @@ fn main() {
     let x = 12;
     println!("{}", collatz::collatize(x));
 }
-

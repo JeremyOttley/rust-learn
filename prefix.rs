@@ -13,7 +13,7 @@ fn get_user_input() -> String {
         .read_line(&mut input)
         .expect("Failed to read line");
 
-    input.trim().to_uppercase()
+    input.trim()
 }
 
 fn main() {

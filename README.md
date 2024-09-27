@@ -22,6 +22,7 @@ let my_box_str: Box<str> = my_str.into_boxed_str();
 Rc<str> -> Share immutable string slice without cloning
 
 Arc<str> -> Shared and thread safe string slice without cloning
+let name: Arc<str> = "Jeremy".into();
 
 
 

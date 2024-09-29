@@ -8,11 +8,11 @@ enum Color {
 }
 
 impl fmt::Display for Color {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            Color::Red => write!(f, "Red"),
-            Color::Green => write!(f, "Green"),
-            Color::Blue => write!(f, "Blue"),
+            Color::Red => write!(f, "{}", "Red"),
+            Color::Green => write!(f, "{}", "Green"),
+            Color::Blue => write!(f, "{}", "Blue"),
         }
     }
 }

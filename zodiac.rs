@@ -5,7 +5,10 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let f = String::from("You will get laid!");
     let h = Horoscope(Sign::Scorpio, Fortune(f));
+    let g = new_horoscope(Sign::Taurus);
+    println!("{}", f);
     println!("{}", h);
+    println!("{}", g);
 
     Ok(())
 }
@@ -68,3 +71,8 @@ impl fmt::Display for Horoscope {
     }
 }
 
+fn new_horoscope(sign: Sign) -> Horoscope {
+  let fortune = String::from("You will get lucky tonight!");
+  let h = Horoscope(sign, Fortune(fortune));
+  h
+}

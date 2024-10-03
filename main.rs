@@ -4,7 +4,6 @@ use std::error::Error;
 // is only known at runtime, not statically
 fn main() -> Result<(), Box<dyn Error>> {
 
-  // do stuff
 
     Ok(())
 }

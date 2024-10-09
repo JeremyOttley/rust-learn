@@ -1,4 +1,11 @@
-use regex::Regex; //crate
+use regex::Regex;
 
-// doi: 10.1215/9874738291023
-let re = Regex::new(r"(?P<prefix>\d{2}\.\d{4})\/(?P<isbn>\d{12})(?P<check>\d |\w)").unwrap();
+fn main() {
+    let re = Regex::new(r"\[(?<newfilename>\w+)\]").unwrap();
+    let Some(new_file_name) = re.captures("20D4EB1 [GA4D84F4].mp4") else {
+        println!("no match!");
+        return;
+    };
+    //println!("Check digit is: {}", &check_digit["check"]);
+    println!("File renamed to {:?}.mp4", &new_file_name["newfilename"]);
+}

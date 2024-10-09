@@ -6,6 +6,6 @@ fn main() {
         println!("no match!");
         return;
     };
-    //println!("Check digit is: {}", &check_digit["check"]);
-    println!("File renamed to {:?}.mp4", &new_file_name["newfilename"]);
+    let x = format!("{}.mp4", &new_file_name["newfilename"]);
+    println!("File renamed to {}", x);
 }

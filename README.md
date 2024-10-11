@@ -24,5 +24,7 @@ Rc<str> -> Share immutable string slice without cloning
 Arc<str> -> Shared and thread safe string slice without cloning
 let name: Arc<str> = "Jeremy".into();
 
+## Iter vs Into_Iter
 
+"`iter()` for read-only operations and `into_iter()` when you need to take ownership and potentially mutate or consume the data."
 

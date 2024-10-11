@@ -2,6 +2,9 @@
 
 ## Strings
 
+`String -> Vec<u8>`
+`&str -> &[u8]`
+
 ### String Type
 
 `String` -> Create/modify strings

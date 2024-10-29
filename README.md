@@ -2,6 +2,9 @@
 
 ## Cargo.toml
 
+[profile.dev]
+opt-level = 1
+
 [profile.release]
 panic = 'abort'
 

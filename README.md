@@ -7,7 +7,7 @@ opt-level = 1
 
 [profile.release]
 panic = 'abort'
-
+strip = "debuginfo"
 ## Strings
 
 `String -> Vec<u8>`

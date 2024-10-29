@@ -1,5 +1,10 @@
 # rust-learn
 
+## Cargo.toml
+
+[profile.release]
+panic = 'abort'
+
 ## Strings
 
 `String -> Vec<u8>`
